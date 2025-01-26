@@ -1,0 +1,9 @@
+{
+    "files.associations": {
+        "cstdio": "c",
+        "standard_io.h": "c",
+        "calculator.h": "c",
+        "branching_statement.h": "c",
+        "hello.h": "c"
+    }
+}

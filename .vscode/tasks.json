@@ -11,6 +11,9 @@
                 "Hello/Hello.c",
                 "10_Standard_IO/Standard_IO.c",
                 "11_Calculator/Calculator.c",
+                "12_branching_statement/branching_statemont.c",
+                "13_Iteration/Iteration.c",
+                "14_array/array.c",
                 "-o",
                 "${fileDirname}/${fileBasenameNoExtension}"
             ],

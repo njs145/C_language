@@ -1,7 +1,7 @@
 #include "Calculator.h"
 
 #define HOURPERSEC  3600
-#define MINPERSEC   60
+#define MINPERSEC   60 
 
 static void arithmetic_operators_example(void);
 static void Variant_type_promotion_example(void);
