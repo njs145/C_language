@@ -22,10 +22,10 @@ static void Break_and_continue(void);
 
 exec_test_t Iteration_func[CHATER_13_MAX_OF_TEST] = {
     [CHATER_13_TITLE]  = {"Chapter 13. branching statement (By JinSong)", NULL},
-    [CHATER_13_TEST_1] = {"13.branching statement test 1", Iteration_test1},
-    [CHATER_13_TEST_2] = {"13.branching statement test 2", Iteration_test2},
-    [CHATER_13_TEST_3] = {"13.branching statement test 3", Iteration_test3},
-    [CHATER_13_TEST_4] = {"13.branching statement test 4", Iteration_test3},
+    [CHATER_13_TEST_1] = {"1.branching statement test 1", Iteration_test1},
+    [CHATER_13_TEST_2] = {"2.branching statement test 2", Iteration_test2},
+    [CHATER_13_TEST_3] = {"3.branching statement test 3", Iteration_test3},
+    [CHATER_13_TEST_4] = {"4.branching statement test 4", Iteration_test3},
 };
 
 void Iteration_main(void)
