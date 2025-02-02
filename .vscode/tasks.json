@@ -14,6 +14,7 @@
                 "12_branching_statement/branching_statemont.c",
                 "13_Iteration/Iteration.c",
                 "14_array/array.c",
+                "common/UI.c",
                 "-o",
                 "${fileDirname}/${fileBasenameNoExtension}"
             ],

@@ -1,4 +1,5 @@
 #include "Iteration.h"
+#include "../common/UI.h"
 
 #define WHILE       0
 #define FOR         1
@@ -10,26 +11,26 @@
 
 
 static void Conditional_Iterative_While_Infinite_Loops(void);
-static void while_test1(void);
+static void Iteration_test1(void);
 static void Counting_based_Iteration_for(void);
-static void while_test2(void);
+static void Iteration_test2(void);
 static void Nesting_Loops(void);
-static void while_test3(void);
-static void while_test4(void);
+static void Iteration_test3(void);
+static void Iteration_test4(void);
 static void The_do_while_Statement(void);
 static void Break_and_continue(void);
 
+exec_test_t Iteration_func[CHATER_13_MAX_OF_TEST] = {
+    [CHATER_13_TITLE]  = {"Chapter 13. branching statement (By JinSong)", NULL},
+    [CHATER_13_TEST_1] = {"13.branching statement test 1", Iteration_test1},
+    [CHATER_13_TEST_2] = {"13.branching statement test 2", Iteration_test2},
+    [CHATER_13_TEST_3] = {"13.branching statement test 3", Iteration_test3},
+    [CHATER_13_TEST_4] = {"13.branching statement test 4", Iteration_test3},
+};
+
 void Iteration_main(void)
 {
-    // Conditional_Iterative_While_Infinite_Loops();
-    // while_test1();
-    // Counting_based_Iteration_for();
-    // while_test2();
-    // Nesting_Loops();
-    // while_test3();
-    // while_test4();
-    // The_do_while_Statement();
-    Break_and_continue();
+    UI_event_loop_exec_test(Iteration_func, sizeof(Iteration_func)/sizeof(exec_test_t));
 }
 
 /* 
@@ -47,7 +48,7 @@ static void Conditional_Iterative_While_Infinite_Loops(void)
 /* 
 desc: 섹션 13장 [필수 실습 문제] 한 줄에 '*' 출력
 */
-static void while_test1(void)
+static void Iteration_test1(void)
 {
     __uint32_t num;
     __uint32_t i = 1;
@@ -83,7 +84,7 @@ static void Counting_based_Iteration_for(void)
 /* 
 desc: 섹션 13장 [필수 실습 문제] 총합 계산하기
 */
-static void while_test2(void)
+static void Iteration_test2(void)
 {
     __uint32_t sum = 0;
     __uint32_t i;
@@ -120,7 +121,7 @@ static void Nesting_Loops(void)
 /* 
 desc: 섹션 13장 [필수 실습 문제] 국룰 * 출력 놀이
 */
-static void while_test3(void)
+static void Iteration_test3(void)
 {
     __uint32_t i, j;
 
@@ -137,7 +138,7 @@ static void while_test3(void)
 /* 
 desc: 섹션 13장 [필수 실습 문제] '*' 출력 놀이 응용
 */
-static void while_test4(void)
+static void Iteration_test4(void)
 {
     __int32_t i, j, q;
 

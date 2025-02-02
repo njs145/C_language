@@ -1,7 +1,8 @@
 #include "Calculator.h"
+#include "../common/UI.h"
 
 #define HOURPERSEC  3600
-#define MINPERSEC   60 
+#define MINPERSEC   60
 
 static void arithmetic_operators_example(void);
 static void Variant_type_promotion_example(void);
@@ -25,29 +26,19 @@ static void Calculator_test6(void);
 static void Calculator_test7(void);
 static void Calculator_test8(void);
 
+exec_test_t Calculator_exec_func[7] = {
+    [CHATER_11_TITLE]  = {"Chapter 11. Calculator (By JinSong)", NULL},
+    [CHATER_11_TEST_1] = {"1.Standard IO test 1", Calculator_test1},
+    [CHATER_11_TEST_2] = {"2.Standard IO test 2", Calculator_test2},
+    [CHATER_11_TEST_3] = {"3.Standard IO test 3", Calculator_test3},
+    [CHATER_11_TEST_4] = {"4.Standard IO test 4", Calculator_test4},
+    [CHATER_11_TEST_5] = {"5.Standard IO test 5", Calculator_test5},
+    [CHATER_11_TEST_6] = {"6.Standard IO test 6", Calculator_test6},
+};
+
 void Calculator_main(void)
 {
-    // arithmetic_operators_example();
-    // Variant_type_promotion_example();
-    // Divide_zero_example();
-    // Calculator_test1();
-    // Calculator_test2();
-    // Simple_assignment_operators_example();
-    // Calculator_test3();
-    // compound_assignment_operators_example();
-    // Calculator_test4();
-    // cast_operators_example();
-    // unary_increasse_decrease_operators_example();
-    // bitwise_operators_endianness_example();
-    // Calculator_test5();
-    // sizeof_operator_example();
-    // relational_operator_example();
-    // logical_operator_example();
-    // sortcirtuits_checking_common_error_example();
-    // conditional_ternary_operator_example();
-    // Calculator_test6();
-    // Calculator_test7();
-    Calculator_test8();
+    UI_event_loop_exec_test(Calculator_exec_func, sizeof(Calculator_exec_func)/sizeof(exec_test_t));
 }
 
 /*#########################################################

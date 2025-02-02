@@ -1,4 +1,5 @@
 #include "branching_statement.h"
+#include "../common/UI.h"
 
 #define BUS_CHARGE  1000
 
@@ -13,19 +14,16 @@ static void Nested_Scopes_Identifier_Search_Order(void);
 static void Switch_Case_Statements(void);
 static void Unconditional_goto_statements(void);
 
+exec_test_t branching_statement_func[CHATER_12_MAX_OF_TEST] = {
+    [CHATER_12_TITLE]  = {"Chapter 12. branching statement (By JinSong)", NULL},
+    [CHATER_12_TEST_1] = {"1.branching statement test 1", branching_statement_test1},
+    [CHATER_12_TEST_2] = {"2.branching statement test 2", branching_statement_test2},
+    [CHATER_12_TEST_3] = {"3.branching statement test 3", branching_statement_test3},
+};
+
 void branching_statement_main(void)
 {
-    // printf("hello branching statement!\n");
-    // If_Statements_Scopes();
-    // branching_statement_test1();
-    // branching_statement_test2();
-    // If_Else_Statements();
-    // Nesting_if_else_statements();
-    // branching_statement_test3();
-    // Multiple_if_Statements();
-    // Nested_Scopes_Identifier_Search_Order();
-    // Switch_Case_Statements();
-    Unconditional_goto_statements();
+    UI_event_loop_exec_test(branching_statement_func, sizeof(branching_statement_func)/sizeof(exec_test_t));
 }
 
 /* 

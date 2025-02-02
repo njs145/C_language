@@ -1,4 +1,10 @@
 #include "array.h"
+#include "../common/UI.h"
+
+#define DEASCENDING     0
+#define ASCENDING       1
+
+#define BUS_CHARGE      1000;
 
 static void Basic_Syntax_for_Arrays(void);
 static void array_test1(void);
@@ -9,21 +15,18 @@ static void array_test4(void);
 static void array_test5(void);
 static void Advanced_Techniques_Lookup_Arrays(void);
 
-#define DEASCENDING     0
-#define ASCENDING       1
-
-#define BUS_CHARGE      1000;
+exec_test_t array_func[CHATER_14_MAX_OF_TEST] = {
+    [CHATER_14_TITLE]  = {"Chapter 14. array (By JinSong)", NULL},
+    [CHATER_14_TEST_1] = {"1.array_test 1", array_test1},
+    [CHATER_14_TEST_2] = {"2.array_test 2", array_test2},
+    [CHATER_14_TEST_3] = {"3.array_test 3", array_test3},
+    [CHATER_14_TEST_4] = {"4.array_test 4", array_test4},
+    [CHATER_14_TEST_5] = {"5.array_test 5", array_test5},
+};
 
 void array_main(void)
 {
-    // Basic_Syntax_for_Arrays();
-    // array_test1();
-    // array_test2();
-    // array_test3();
-    // Multidimensional_Arrays();
-    // array_test4();
-    // array_test5();
-    Advanced_Techniques_Lookup_Arrays();
+    UI_event_loop_exec_test(array_func, sizeof(array_func)/sizeof(exec_test_t));
 }
 
 /* 
@@ -260,7 +263,7 @@ static void array_test5(void)
     for(temp_side = sizeof(array[0]); temp_side > 0;)
     {
         side_value[side_size_index] = temp_side;
-        printf("side size = %d\n",side_value[side_size_index]);
+        // printf("side size = %d\n",side_value[side_size_index]);
         side_size_index ++;
         if(side_size_index % 2)
         {
@@ -273,7 +276,7 @@ static void array_test5(void)
     for(temp_corner = 1; temp_corner <= sizeof(array);)
     {
         corner_value[corner_value_index] = temp_corner;
-        printf("corner value: %d\n",corner_value[corner_value_index]);
+        // printf("corner value: %d\n",corner_value[corner_value_index]);
         temp_corner += side_value[side_size_index];
         corner_value_index ++;
         side_size_index ++;

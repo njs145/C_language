@@ -1,4 +1,5 @@
 #include "Standard_IO.h"
+#include "../common/UI.h"
 
 static void stdio_example(void);
 static void format_escape_string_example(void);
@@ -7,16 +8,17 @@ static void scanf_example(void);
 static void string_example(void);
 static void Standard_IO_test(void);
 
+exec_test_t Standard_IO_exec_func[2] = {
+    [CHATER_10_TITLE]  = {"Chapter 10. Standard IO (By JinSong)", NULL},
+    [CHATER_10_TEST_1] = {"1.Standard IO test", Standard_IO_test},
+};
+
 /* 
 desc: 독하게 시작하는 C 프로그래밍 섹션 10장 실행 함수.
 */
 void Standard_IO_main(void)
 {
-    // stdio_example();
-    // format_escape_string_example();
-    // string_example();
-    Standard_IO_test();
-
+    UI_event_loop_exec_test(Standard_IO_exec_func, sizeof(Standard_IO_exec_func)/sizeof(exec_test_t));
 }
 
 /* 
